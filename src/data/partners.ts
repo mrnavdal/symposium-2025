@@ -26,6 +26,14 @@ export const partners: Partner[] = [
     website: 'https://www.jic.cz/cz/',
     category: 'cestny_partner'
   },
+  {
+    id: 'pkv',
+    name: 'PKV',
+    description: '',
+    logo: '/images/partners/pkv.png',
+    website: 'https://www.pkv.cz/',
+    category: 'cestny_partner'
+  },
   // Sponzoři
   {
     id: 'motmot',
