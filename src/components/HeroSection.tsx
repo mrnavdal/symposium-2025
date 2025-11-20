@@ -7,7 +7,7 @@ import { fadeIn, staggerContainer } from '@/lib/animations'
 export function HeroSection() {
   return (
     <motion.div 
-      className="relative h-[60vh] min-h-[400px] w-full"
+      className="relative h-[50vh] min-h-[350px] w-full"
       variants={fadeIn}
       initial="initial"
       animate="animate"
@@ -18,9 +18,9 @@ export function HeroSection() {
         alt="Conference hall"
         fill
         priority
-        className="object-cover rounded-lg"
+        className="object-cover rounded-2xl"
       />
-      <div className="absolute inset-0 bg-black/40 rounded-lg" />
+      <div className="absolute inset-0 bg-black/40 rounded-2xl" />
       <motion.div 
         className="absolute inset-0 flex items-center justify-center text-white"
         variants={staggerContainer}
@@ -33,14 +33,14 @@ export function HeroSection() {
             alt="Symposium logo"
             width={500}
             height={100}
-            className="text-4xl md:text-6xl font-bold"
+            className="text-4xl md:text-6xl font-bold drop-shadow-2xl"
             variants={fadeIn}
           />
           <motion.p 
-            className="text-xl md:text-2xl"
+            className="text-xl md:text-2xl font-semibold drop-shadow-lg"
             variants={fadeIn}
           >
-            Business nové generace
+            Změnou k úspěchu
           </motion.p>
         </div>
       </motion.div>

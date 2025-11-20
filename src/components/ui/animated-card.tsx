@@ -14,7 +14,7 @@ export function AnimatedCard({
   return (
     <div
       className={cn(
-        'rounded-lg border bg-card p-6 shadow-sm',
+        'rounded-2xl border bg-card text-card-foreground p-6 shadow-sm',
         className
       )}
       {...props}

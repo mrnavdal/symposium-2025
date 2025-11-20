@@ -17,7 +17,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans bg-background`}>
+      <body className={`font-sans`}>
+        <div 
+          className="fixed inset-0 w-full h-full -z-10"
+          style={{
+            backgroundImage: "url('/images/hero-image.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat"
+          }}
+        >
+          <div className="fixed inset-0 bg-black/40" />
+        </div>
+        
         <ClientAnimatePresence>
           <ThemeProvider
             attribute="class"
@@ -27,7 +39,7 @@ export default function RootLayout({
           >
             <div className="min-h-screen">
               <Navigation />
-              <div className="md:ml-[280px]">
+              <div className="md:ml-[280px] pt-4">
                 <main className="w-full">
                   {children}
                 </main>

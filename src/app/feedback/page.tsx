@@ -6,33 +6,24 @@ import { AnimatedCard } from '@/components/ui/animated-card'
 export default function FeedbackPage() {
   return (
     <PageTransition>
-      <Container className="pb-20 md:pb-10  md:pt-5 min-h-screen bg-background">
+      <Container className="pb-20 md:pb-10  md:pt-5 min-h-screen">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Zpětná vazba</h1>
           
-          <div className="">
-            <AnimatedCard delay={0.1}>
-              <div className="prose dark:prose-invert max-w-none">
-                <h2 className="text-2xl text-gray-light mb-4">Pomozte nám se zlepšit</h2>
-                <p className="text-gray-light">
-                  Vaše zpětná vazba je neocenitelná při pomoci nám zlepšit Symposium. 
-                  Rádi bychom slyšeli o vaší zkušenosti s:
+          <div className="space-y-6">
+            <AnimatedCard delay={0.1} className="bg-white">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold mb-4">Vaše zpětná vazba</h2>
+                <p>
+                  Vaše zpětná vazba je pro nás velmi cenná a pomáhá nám konference i další akce neustále zlepšovat. Budeme rádi, když se s námi podělíte o své dojmy, nápady a doporučení prostřednictvím krátkého formuláře.
                 </p>
-                <ul className="list-disc pl-6 mb-4 text-gray-light">
-                  <li>Obsah a prezentace přednášek</li>
-                  <li>Organizace a materiály workshopů</li>
-                  <li>Příležitosti k networkingu</li>
-                  <li>Místo konání a zařízení</li>
-                  <li>Celková organizace akce</li>
-                </ul>
-                <p className="text-gray-light">
-                  Vyplnění dotazníku by nemělo trvat déle než 5 minut. 
-                  Vaše odpovědi budou anonymní a pomohou formovat budoucí akce.
+                <p>
+                  Jako poděkování za váš čas se můžete zapojit do soutěže o <strong>speciální dárek od našeho sponzora Ofigo</strong>. Stačí vyplnit formulář se zpětnou vazbou a uvést svůj e-mail, abychom vás mohli zařadit do losování. Na konci konference vylosujeme jednoho výherce.
                 </p>
               </div>
             </AnimatedCard>
 
-            <AnimatedCard delay={0.2} className="text-center">
+            <AnimatedCard delay={0.2} className="text-center bg-white">
               <FeedbackLink />
             </AnimatedCard>
           </div>

@@ -85,4 +85,21 @@
   .rbc-time-slot {
     @apply text-gray-light;
   }
+
+  /* Allow text to wrap in events */
+  .rbc-event-content {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Ensure events don't override automatic column positioning */
+  .rbc-event {
+    box-sizing: border-box;
+  }
+
+  /* Make sure the event label is visible */
+  .rbc-event-label {
+    font-size: 0.75rem;
+  }
 }

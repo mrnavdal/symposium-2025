@@ -7,7 +7,7 @@ import {
   Home, 
   Calendar, 
   Users, 
-  MessageCircle, 
+  Handshake, 
   MessageSquare,
   LucideIcon 
 } from 'lucide-react'
@@ -19,11 +19,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: '/', label: 'Úvod', icon: Home },
+  { href: '/intro', label: 'Úvod', icon: Home },
   { href: '/schedule', label: 'Program', icon: Calendar },
   { href: '/networking', label: 'Networking', icon: Users },
-  { href: '/discussion', label: 'Diskuse', icon: MessageCircle },
-  { href: '/feedback', label: 'Feedback', icon:MessageSquare },
+  { href: '/partners', label: 'Partneři', icon: Handshake },
+  { href: '/feedback', label: 'Feedback', icon: MessageSquare },
 ]
 
 export function Navigation() {
@@ -32,7 +32,7 @@ export function Navigation() {
   return (
     <>
       {/* Desktop Side Navigation */}
-      <nav className="hidden md:flex fixed left-0 top-0 h-screen w-64 border-r bg-background p-4">
+      <nav className="hidden md:flex fixed left-0 top-0 h-screen w-64 border-r bg-background/50 backdrop-blur-sm p-4 z-50">
         <div className="space-y-4 w-full">
           <div className="px-3 py-2">
             <h2 className="mb-2 px-4 text-lg font-semibold">Symposium</h2>
@@ -44,8 +44,8 @@ export function Navigation() {
                 href={item.href}
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors',
-                  pathname === item.href 
-                    ? 'bg-secondary text-secondary-foreground' 
+                  pathname.includes(item.href) 
+                    ? 'text-primary bg-secondary' 
                     : 'hover:bg-secondary/80'
                 )}
               >
@@ -58,16 +58,16 @@ export function Navigation() {
       </nav>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 border-t bg-background z-50">
-        <div className="grid grid-cols-5 w-full">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 border-t bg-background/80 backdrop-blur-sm z-50">
+        <div className="grid grid-cols-5 w-full gap-1 p-2">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                'flex flex-col items-center gap-1 p-3 text-xs',
-                pathname === item.href 
-                  ? 'text-primary' 
+                'flex flex-col items-center gap-1 p-2 text-xs rounded-xl transition-colors',
+                pathname.includes(item.href) 
+                  ? 'text-primary bg-secondary dark:bg-gray-700' 
                   : 'text-muted-foreground'
               )}
             >
@@ -79,7 +79,7 @@ export function Navigation() {
       </nav>
 
       {/* Content Padding for Mobile Bottom Nav */}
-      <div className="pb-4 md:pb-0 md:pl-64 bg-background">
+      <div className="pb-0 md:pb-0 md:pl-64 bg-background">
         {/* This div wraps the main content to provide padding */}
       </div>
     </>

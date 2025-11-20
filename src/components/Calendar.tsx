@@ -26,13 +26,16 @@ const eventStyleGetter = (event: CalendarEvent) => {
 
   return {
     className: cn(
-      'rounded-md border backdrop-blur-sm transition-colors',
+      'rounded-md backdrop-blur-sm transition-colors',
       isOngoing && 'ring-2 ring-yellow-400/50 shadow-lg'
     ),
     style: {
       backgroundColor: colors.bg,
       borderColor: colors.border,
+      borderWidth: '1px',
+      borderStyle: 'solid',
       padding: '4px 8px',
+      // Don't set position, left, width, or right - let react-big-calendar handle column layout
     }
   }
 }
@@ -58,51 +61,62 @@ export function Calendar({ events }: CalendarProps) {
     })
   }, [events])
 
-  const calendarProps = useMemo(() => ({
-    className: cn(
-      'rounded-lg',
-      'bg-[#1a1a1a]',
-    ),
-    views: ['day'] as View[],
-    defaultView: 'day' as View,
+  const calendarProps = useMemo(() => {
+    const today = moment().startOf('day')
+    const minTime = today.clone().hour(14).minute(0).toDate()
+    const maxTime = today.clone().hour(23).minute(59).toDate()
 
-    formats: {
-      timeGutterFormat: (date: Date) => moment(date).format('HH:mm'),
-      eventTimeRangeFormat: ({ start, end }: { start: Date, end: Date }) => 
-        `${moment(start).format('HH:mm')} - ${moment(end).format('HH:mm')}`,
-    },
-    localizer,
-    events: recurringEvents,
-    step: 30,
-    timeslots: 2,
-    eventPropGetter: eventStyleGetter,
-    tooltipAccessor: (event: CalendarEvent) => 
-      `${event.title}\nLocation: ${event.location}\nSpeaker: ${event.speaker}`,
-    toolbar: false,
-    dayPropGetter: () => ({
-      style: {
-        backgroundColor: theme === 'dark' ? '#2e334c' : '#2e334c',
-        color: theme === 'dark' ? '#e5e5e5' : '#fff'
-      }
-    }),
-    slotPropGetter: () => ({
-      style: {
-        backgroundColor: theme === 'dark' ? '#2e334c' : '#2e334c',
-        borderColor: theme === 'dark' ? '#2a2a2a' : '#333',
-        color: theme === 'dark' ? '#e5e5e5' : '#fff'
-      }
-    }),
-    onSelectEvent: (event: CalendarEvent) => {
-      setSelectedEvent(event)
-    },
-  }), [recurringEvents, theme])
+
+    return {
+      className: cn(
+        'rounded-lg',
+        'bg-[#1a1a1a]',
+      ),
+      views: ['day'] as View[],
+      defaultView: 'day' as View,
+
+      formats: {
+        timeGutterFormat: (date: Date) => moment(date).format('HH:mm'),
+        eventTimeRangeFormat: ({ start, end }: { start: Date, end: Date }) => 
+          `${moment(start).format('HH:mm')} - ${moment(end).format('HH:mm')}`,
+      },
+      localizer,
+      events: recurringEvents,
+      step: 10,
+      timeslots: 1,
+      min: minTime,
+      max: maxTime,
+      eventPropGetter: eventStyleGetter,
+      tooltipAccessor: (event: CalendarEvent) => 
+        `${event.title}\nLocation: ${event.location}\nSpeaker: ${event.speaker}`,
+      toolbar: false,
+      dayPropGetter: () => ({
+        style: {
+          backgroundColor: theme === 'dark' ? '#2e334c' : '#2e334c',
+          color: theme === 'dark' ? '#e5e5e5' : '#fff'
+        }
+      }),
+      slotPropGetter: () => ({
+        style: {
+          backgroundColor: theme === 'dark' ? '#2e334c' : '#2e334c',
+          borderColor: theme === 'dark' ? '#2a2a2a' : '#333',
+          color: theme === 'dark' ? '#e5e5e5' : '#fff'
+        }
+      }),
+      onSelectEvent: (event: CalendarEvent) => {
+        setSelectedEvent(event)
+      },
+    }
+  }, [recurringEvents, theme])
 
   return (
     <>
-      <BigCalendar 
-        {...calendarProps} 
-        style={{ height: 'calc(100vh - 100px)' }}
-      />
+      <div className="h-full w-full min-h-0">
+        <BigCalendar 
+          {...calendarProps} 
+          style={{ height: '100%' }}
+        />
+      </div>
       <EventDialog 
         event={selectedEvent}
         open={selectedEvent !== null}

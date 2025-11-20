@@ -1,164 +1,195 @@
 import { CalendarEvent } from '@/types/event'
 
 export const events: CalendarEvent[] = [
-    {
-        id: '0',
-        title: 'Networking',
-        type: 'networking',
-        start: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 0),
-        end: new Date(2024, new Date().getMonth(), new Date().getDate(), 22, 59),
-        speaker: '',
-        location: 'Hlavní sál',
-        description: 'Networkujte s ostatními účastníky.'
-    },
   {
     id: '1',
-    title: 'Nečekejte na diplom. Jak správně chápat pojem "Investice"',
-    type: 'workshop',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 10), 
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 40),
-    speaker: 'Václav Vidlička',
-    location: 'Cashmere (sraz před schody do nejnižšího patra)',
-    description: 'Naučíte se rozpoznat investiční příležitosti, pochopíte možná rizika a objevíte také alternativní možnosti investic jako P2B platformy. Odnesete si praktické tipy, jak si už nyní zajistit finančně svobodnější budoucnost – bez složitostí, jen reálné možnosti.'
-  },
-  {
-    id: '2',
-    title: 'Sebehodnota a peníze',
-    type: 'workshop',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 12, 20),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 13, 50),
-    speaker: 'Lucie Audi',
-    location: 'Cashmere (sraz před schody do nejnižšího patra)',
-    description: 'Zabránila ti někdy nervozita projevit vlastní názor? Je pro tebe těžké mluvit nahlas speciálně o penězích? Popovídáme si o tom, jak zvládat vlastní nervozitu. Půjdeme do běžných situací a řekneme si, jak si říkat o peníze v případě, že podnikáš, na pohovoru nebo jak si říct o povýšení.'
-  },
-  {
-    id: '3',
-    title: 'Jak to říct, když to může být nepříjemné?',
-    type: 'workshop',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 9, 0),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 11, 0),
-    speaker: 'Petr Sucháček',
-    location: 'Cashmere (sraz před schody do nejnižšího patra)',
-    description: 'Rádi byste v práci mluvili otevřeně a konstruktivně o nepříjemných věcech? Stáli byste o to umět ustát emočně vypjatou situaci? Nenásilná komunikace nabízí principy a postupy, které vám v tom mohou pomoci. Pojďte si je vyzkoušet na vlastní kůži.'
-  },
-  {
-    id: '4',
-    title: 'Udržitelnost jako cesta k vyspělému Česku',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 40),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 10),
-    speaker: 'Lukáš Rolf',
-    location: 'Hlavní sál',
-    description: 'Celý svět hledá cesty k zelenější ekonomice. 92 procent světového HDP je tvořeno v zemích, které se zavázaly snížit emise na čistou nulu. Směr je jasný a Čína i USA zařadily další rychlostní stupeň. Jaké byznysové příležitosti tento zelený závod přináší pro Česko? A pro vaši firmu nebo startup?'
-  },
-  {
-    id: '5',
-    title: 'Jak CzechInvest akceleruje inovace',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 12, 20),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 12, 50),
-    speaker: 'Dominik Urban',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'V této přednášce budou představeny dva klíčové startupové programy CzechInvestu: Technologická Inkubace a Akcelerace. Tyto programy se zaměřují na podporu inovativních technologií napříč různými obory. Posluchači se seznámí s hlavními kritérii pro přijetí, procesem hodnocení projektů a kategorizací uznatelných výdajů. Získáte tak ucelený přehled o tom, jak tyto programy mohou podpořit růst a rozvoj vašeho startupu.'
-  },
-  {
-    id: '6',
-    title: 'Warriors mindset, jak vybudovat globální firmu s dosahem z gauče',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 12, 50),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 13, 20),
-    speaker: 'Tomáš Svoboda',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Jak používám Warrior Mindset v podnikání, při kterém jsem rozjel firmu z gauče do 7-místného exitu za 3 roky? Jaké principy používat pro pozitivní dopad, úspěch zákazníků a přeměnu jejich firem na údržitelné podnikání? To vše se dozvíte v přednášce Tomáše Svobody.'
-  },
-  {
-    id: '7',
-    title: 'Najdi (znovu) svůj směr: tipy z koučovací praxe',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 13, 20),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 13, 50),
-    speaker: 'Sylva Žáková Talpová',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Začátek podnikání je typickou složitou situací, ve které je třeba udělat velké množství rozhodnutí. Taková rozhodnutí ale děláme každý den, celý život. Koučink jedním z nejefektivnějších nástrojů pro osobní a profesní růst. Společně si projdeme, o čem koučink je a také si ukážeme praktické tipy a triky, které vám pomohou posunout se správným směrem. Dotkneme se i komunikace, vyjednávání a dobrých otázek.'
-  },
-  {
-    id: '8',
-    title: 'Kontroverze leadersipu, jak nekonvenční přístupy mění hru.',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 10),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 40),
-    speaker: 'Martin Urban',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'V této přednášce se podíváme na kontroverzní témata v leadershipu, která často vyvracejí tradiční představy o tom, jak by vedení mělo vypadat. Zaměříme se na to, jak mohou netradiční přístupy měnit pravidla hry a proč v některých situacích funguje přesný opak toho, co se běžně očekává. Na základě svých zkušeností vám ukážu, proč některé zavedené metody neplatí v určitých situacích, týmech, firmách či dokonce generacích. Připravte se na příběhy z reálných situací, které mohou změnit váš pohled na leadership.'
-  },
-  
-  {
-    id: '10',
-    title: 'Jak testovat produkt za minimální náklady',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 10),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 40),
-    speaker: 'Markéta Uhrová',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Testování se zákazníky: I bez hotového produktu můžete svůj produkt / prototyp otestovat rychle a levně. Zaměřím se nejen na to, jak a na co ptát budoucích zákazníků, ale i jak levně ukázat, co máte pro zákazníky připraveno. Jak si to ověřit dříve než utratíte spoustu peněz za vývoj.'
-  },
-  {
-    id: '11',
-    title: 'Komunikace s dopadem, jak přetavit udržitelnost v úspěšnou strategii',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 0),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 30),
-    speaker: 'Kateřina Leiutner Genttnerová',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Udržitelné podnikání – termín, který slyšíme ze všech stran. Ale rozumíme mu opravdu všichni? Ve skutečnosti jde o témata, na kterých se většina z nás shodne, jen se nyní skrývají pod jedním označením, které může mít pro někoho negativní konotaci. Jak zajistit, aby ve vaší firmě skutečně chápali, co to znamená? Jak tento pojem a s ním spojené principy prezentovat nejen interně, ale i obchodním partnerům, zákazníkům a investorům? A co je nejdůležitější – kde začít, co prioritizovat a na co nezapomenout při zavádění principů udržitelnosti do vašeho podnikání?'
-  },
-  {
-    id: '12',
-    title: 'Mohou moje peníze vydělávat místo mě?',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 30),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 0),
-    speaker: 'Václav Vidlička',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Pojďme se společně podívat pod pokličku velmi populárního pojmu "investování". Co to vlastně znamená, jak nám dnešní technologie umožňují investovat velmi snadno, rychle a prakticky odkudkoliv. Vysvětlíme si, že investice se nerovná tomu, že přijdu o peníze, ani se neztotožníme s tím, že investice = akcie, bitcoin, zlato. Podíváme se na to, co pojem investice znamená ve své pravé podstatě a jak si své portfolium nastavit podle svých životních cílů a potřeb.'
-  },
-  {
-    id: '13',
-    title: 'Jak z komunity vybudovat firmu',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 0),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 30),
-    speaker: 'Lucie Audi',
-    location: 'Hlavní sál',
-    //TODO: Add description
-    description: 'Vzdělávací platforma #HolkyzMarketingu se za posledních 10 let svého fungování stala největší českou komunitou marketérek. V tuhle chvíli má už 40 000 členek. Na základě jejího úspěchu se zakladatelky rozhodly vybudovat další vzdělávací platformu a komunitu #HolkyzByznysu. Jak takové budování komunity probíhá? Co to vlastně komunita je a jak ji využít pro svůj byznys? A jak si ji dlouhodobě a efektivně udržet?'
-  },
-  {
-    id: '14',
-    title: 'Panelová diskuse',
-    type: 'lecture',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 50),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 45),
+    title: 'Zahájení konference',
+    type: 'other',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 20),
     speaker: '',
     location: 'Hlavní sál',
-    //TODO: Add description
     description: ''
   },
   {
-    id: '14',
-    title: 'Prohlídka Clubca s CTP',
+    id: '2',
+    title: 'Od startupů po kavárnu: Jak si najít vlastní cestu v podnikání',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 20),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 40),
+    speaker: 'Jasmína Henni',
+    location: 'Hlavní sál',
+    description: 'Úspěch znamená pro každého něco jiného – a stejně tak i podnikání. Někdo sní o rychle rostoucím startupu s globálním dopadem, jiný o tvůrčí svobodě a flexibilním životním stylu, další zase o produktu, na který si může sáhnout. A někdo možná zjistí, že podnikání vůbec není jeho cesta.'
+  },
+  {
+    id: '3',
+    title: 'Pár věcí, které bych před 10 lety potřeboval vědět',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 14, 40),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 0),
+    speaker: 'Karel Dytrych',
+    location: 'Hlavní sál',
+    description: 'Za dekádu budování Freela jsme udělali tisíce rozhodnutí. Některá byla skvělá, jiná katastrofální. Pojďte se podívat na naše největší lekce – úspěchy i průšvihy – abyste se mohli poučit z našich chyb a inspirovat našimi úspěchy.'
+  },
+  {
+    id: '4',
+    title: 'Jak podnikat se společenským přesahem',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 20),
+    speaker: 'Marie Froulíková',
+    location: 'Hlavní sál',
+    description: 'Svět se zrychluje a pracovní trh se mění – vznikají nové profese, staré zanikají. Už neplatí, že se budeš živit tím, co jsi vystudoval/a. Klíčové jsou tvé skills, na kterých budeš pracovat celý život. Z průzkumů vyplývá, že čím dál tím více mladých lidí upřednostňuje práci se společenským dopadem. Jednou z takových cest může být i rozjezd vlastního podnikání - sociálního podnikání. Jde podnikat s dopadem a měnit svět kolem sebe? ANO, rozhodně - přijď se dozvědět více.'
+  },
+  {
+    id: '5',
+    title: 'Coffee break',
     type: 'other',
-    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 10),
-    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 40),
-    speaker: 'Eliška Malachová',
-    location: 'Sraz před schody do nejnižšího patra',
-    description: 'Kromě přednášek a workshopů se také můžete těšit na jedinečnou CLUBCO TOUR a nechat se provést prostory Clubco ve Vlněně. 😍 Pokud jste začínající podnikatelé nebo prostě jen hledáte inspiraci pro své podnikatelské ambice, neměli byste si rozhodně nechat ujít tuto jedinečnou příležitost v rámci konference Symposium. Večer od 20:10 se můžete připojit ke komentované prohlídce prostor Clubco ve Vlněně, kterou povede Event and community associate Eliška Malachová. \n\nNa programu bude:\n🔸 Historie Clubco - jak vše začalo až po současnost.\n🔸 Nahlédnutí do moderního interiéru, který může být inspirací pro váš pracovní prostor.\n🔸 Výhody členství v coworkingovém prostoru - kultura, networking a podpora, kterou potřebujete. \n🔸 Podcastové studio a další novinky.\n\nEliška Malachová vás provede úžasným prostorem Clubco ve Vlněně. Těšíme se na vás! 🚀'
-},
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 20),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 40),
+    speaker: '',
+    location: 'Hlavní sál',
+    description: ''
+  },
+  {
+    id: '6',
+    title: 'Cesta ke svobodě? Podnikání na volné noze.',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 40),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 0),
+    speaker: 'Boris Vanka',
+    location: 'Hlavní sál',
+    description: 'Chceš podnikat, ale nevíš, kde začít? Společně s Borisem se podíváš na to, jak rozjet vlastní byznys s minimálním rizikem, po malých krůčcích a s větší udržitelností. Freelancing (česky "volná noha") přínáší svobodu ve výběru projektů, specializaci, místa práce i režimu, který ti sedí nejvíc. Zároveň ale vyžaduje zodpovědnost vůči klientům, přehled ve financích a zvládnutý time management. Objevíš základy podnikání s malou vstupní bariérou, velkými možnostmi a šancí dělat práci, která tě opravdu baví. Všechno přímo z praxe – od zkušeného volnonožce.'
+  },
+  {
+    id: '7',
+    title: 'Hasíš nebo jedeš udržitelně?',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 20),
+    speaker: 'Tereza Hrušková',
+    location: 'Hlavní sál',
+    description: 'Tlak na výkon, hustle culture, perfekcionismus a cíl něčeho v podnikání opravdu dosáhnout. Každý z nás chceme zazářit a být úspěšní v tom, co děláme. Na tom se asi shodneme. Někdy ale můžou přijít náročnější situace či období, kdy o sobě pochybujeme, nedaří se nám nebo nevíme, co se sebou. Náš vnitřní kritik přebírá otěže. Laskavost a starost o sebe jde stranou. Overthinking, imposter syndrom a porovnávání se s ostatními ovlivňuje naše fyzické i duševní zdraví. Jak si ho při podnikaní udržet a jen nehasit? Jak jet dlouhodobě udržitelně a opravdu se o sebe konzistentně starat? To vše si společně rozebereme a ukážeme na příkladech z praxe a konkrétních tipech #nekaslinasebe, jak pracovat se svými emocemi a myšlenkami.'
+  },
+  {
+    id: '8',
+    title: 'Mindset jako konkurenční výhoda',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 20),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 40),
+    speaker: 'Martin Šafařík',
+    location: 'Hlavní sál',
+    description: 'Žijeme v exponenciální době a pokud si můžeme být něčím jistí, tak tím, že změn kolem nás bude stále víc a budou přicházet čím dál rychleji. Co když jedna z odpovědí, jak být v tomto světě úspěšní, neleží venku, ale uvnitř nás v našem nastavení mysli?\n\nV této přednášce se podíváme na koncept růstového nastavení mysli (growth mindset). Podívám se na přístup, který nám pomáhá učit se z výzev, převzít zodpovědnost za vlastní situaci a nebát se selhání. Umožňuje nám uvěřit, že naučit se dá cokoliv. Na konkrétních příkladech z praxe i osobního života si zároveň ukážeme, že nikdo z nás není jen „růstový" nebo „fixní". Jde hlavně o cestu, jak zvýšit procento situací, ve kterých zvládneme reagovat růstově.'
+  },
+  {
+    id: '9',
+    title: 'Od talentu k flow',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 16, 40),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 0),
+    speaker: 'Jiří Kratochvíl',
+    location: 'Hlavní sál',
+    description: 'Každý z nás má jedinečný soubor silných stránek – jen je často nevyužíváme naplno. V této přednášce vám ukážu, jak s nimi pracovat podle metodiky Gallup tak, abyste se dostali do flow, dělali práci, která vás baví, a přitom dosahovali svých cílů. Objevíte, že když využíváte své talenty vědomě, práce přestává být povinností a stává se přirozenou součástí toho, kým jste.'
+  },
+  {
+    id: '10',
+    title: 'Coffee break',
+    type: 'other',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 20),
+    speaker: '',
+    location: 'Hlavní sál',
+    description: ''
+  },
+  {
+    id: '11',
+    title: 'Nevzdávat to, nebo to vzdát včas. Životní lekce, které nesou ovoce i v podnikání.',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 20),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 40),
+    speaker: 'Šimon Bellovič',
+    location: 'Hlavní sál',
+    description: 'Co se stane, když to příliš dlouho „nevzdáváme" – a kde naopak držení zuby nehty ničí zdraví, vztahy i byznys? Budu sdílet příběh svého podnikání, ve kterém se snažím rozlišit zdravou vytrvalost od sebeničení, pracovat se svou kapacitou a rozhodností včas ukončovat projekty, role nebo způsoby, které už neslouží.'
+  },
+  {
+    id: '12',
+    title: 'Jak se stát a zůstat podnikatelem',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 40),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 0),
+    speaker: 'Kateřina Ferbyová',
+    location: 'Hlavní sál',
+    description: 'Podnikatelem tělem i duší se člověk nestává schůzkou na živnostenském úřadě. Podnikatelem se člověk stává postupně, odolávajíc neustálým změnám a těžkostem. Zajedeme na hlubinu toho, jak tenhle růst vypadá v praxi.'
+  },
+  {
+    id: '13',
+    title: '"Nemáte na to." A proč je to to nejlepší, co můžeš slyšet.',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 20),
+    speaker: 'Ondřej Kubák',
+    location: 'Hlavní sál',
+    description: 'Když začínáš, chybí ti všechno — zkušenosti, peníze, kontakty, expertíza. A přesně to tě naučí přemýšlet jinak. Ondřej Kubák, kondiční trenér a spoluzakladatel Strange Training, v přednášce rozebere, jak z „nedostatku" udělat výhodu, jak z chyb vytáhnout lekce a proč je lepší začít teď a nečekat na ten správný moment!'
+  },
+  {
+    id: '14',
+    title: 'Zatím ne!',
+    type: 'lecture',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 20),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 40),
+    speaker: 'Dalibor Pulkert',
+    location: 'Hlavní sál',
+    description: 'Chcete něco začít dělat, ale tak nějak se na něco čeká? Ještě nejsem úplně ready. Čekám na ten pravý nápad. Potřebuju do toho parťáka. Teď asi není ten správný čas, ještě musím to či ono... Prostě to rozjedeme, ale ještě ne. Teď ne. Jak z tohohle začarovaného kruhu ven? Jak tohle rozseknout? O tom si popovídáme společně. :)'
+  },
+  {
+    id: '15',
+    title: 'Závěr konference',
+    type: 'other',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 40),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 0),
+    speaker: '',
+    location: 'Hlavní sál',
+    description: ''
+  },
+  {
+    id: '16',
+    title: 'Ten nejdůležitější krok k větší kapacitě.',
+    type: 'workshop',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 15, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 16,0 ),
+    speaker: 'Šimon Bellovič',
+    location: 'Workshop Block I.',
+    description: 'Co se stane, když to příliš dlouho „nevzdáváme" – a kde naopak držení zuby nehty ničí zdraví, vztahy i byznys? Budu sdílet příběh svého podnikání, ve kterém se snažím rozlišit zdravou vytrvalost od sebeničení, pracovat se svou kapacitou a rozhodností včas ukončovat projekty, role nebo způsoby, které už neslouží.'
+  },
+  {
+    id: '17',
+    title: 'Prohlídka Clubca',
+    type: 'other',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 0),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 30),
+    speaker: '',
+    location: 'Clubco',
+    description: 'Přidejte se na prohlídku prostor coworkingového centra Clubco.'
+  },
+
+  {
+    id: '18',
+    title: 'Networking',
+    type: 'networking',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 19, 30),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 22, 0),
+    speaker: '',
+    location: 'Hlavní sál',
+    description: 'Networkujte s ostatními účastníky.'
+  },
+  {
+    id: '19',
+    title: 'Jak zvládnout začátek podnikání aneb peníze nejsou zdaleka jediný problém',
+    type: 'workshop',
+    start: new Date(2024, new Date().getMonth(), new Date().getDate(), 17, 10),
+    end: new Date(2024, new Date().getMonth(), new Date().getDate(), 18, 10),
+    speaker: 'Petr Brothánek',
+    location: 'Workshop Block I.',
+    description: 'Smyslem a účelem tohoto workshopu bude především ukázat, co kromě peněz je k rozjezdu podnikání potřeba, na co se mají připravit a co si ujasnit. Přednáška bude vedena hravou formou, aby si účastníci v rámci simulací a příkladů mohli některé věci vyzkoušet a mohli jsme si ukázat nejpodstatnější pilíř rozjezdu podnikání, bez kterého je velmi těžké uspět. Žádný nudný výklad či pouhá prezentace, ale jedna velká simulace se sladkými odměnami.'
+  },
 ]
