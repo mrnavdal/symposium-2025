@@ -9,13 +9,14 @@ import { Linkedin, Instagram, Globe, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface SpeakerDetailPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function SpeakerDetailPage({ params }: SpeakerDetailPageProps) {
-  const speaker = speakers.find(s => s.id === params.id)
+export default async function SpeakerDetailPage({ params }: SpeakerDetailPageProps) {
+  const { id } = await params
+  const speaker = speakers.find(s => s.id === id)
   
   if (!speaker) {
     notFound()

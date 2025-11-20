@@ -9,13 +9,14 @@ import { ExternalLink, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface PartnerDetailPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function PartnerDetailPage({ params }: PartnerDetailPageProps) {
-  const partner = partners.find(p => p.id === params.id)
+export default async function PartnerDetailPage({ params }: PartnerDetailPageProps) {
+  const { id } = await params
+  const partner = partners.find(p => p.id === id)
   
   if (!partner) {
     notFound()

@@ -30,7 +30,7 @@ export const partners: Partner[] = [
   {
     id: 'motmot',
     name: 'MOTMOT',
-    description: 'MOTMOT je moderní značka přinášející kvalitní produkty a služby.',
+    description: '',
     logo: '/images/partners/motmot.jpg',
     website: 'https://motmot.cz',
     category: 'sponzor'
@@ -38,7 +38,7 @@ export const partners: Partner[] = [
   {
     id: 'cans',
     name: 'CANS',
-    description: 'CANS je společnost zaměřená na inovativní řešení.',
+    description: '',
     logo: '/images/partners/cans.jpg',
     website: 'https://cz.cans.com/',
     category: 'sponzor'
@@ -46,7 +46,7 @@ export const partners: Partner[] = [
   {
     id: 'vinarstvi-valka',
     name: 'Vinařství Válka',
-    description: 'Rodinné vinařství s tradicí a kvalitou.',
+    description: '',
     logo: '/images/partners/vinarstvi-valka.jpg',
     website: 'https://vinarstvivalka.cz/',
     category: 'sponzor'
@@ -54,7 +54,7 @@ export const partners: Partner[] = [
   {
     id: 'yeahrba',
     name: 'YEAHRBA',
-    description: 'YEAHRBA - moderní řešení pro váš byznys.',
+    description: '',
     logo: '/images/partners/yeahrba.jpg',
     website: 'https://yeahrba.cz/',
     category: 'sponzor'
@@ -62,7 +62,7 @@ export const partners: Partner[] = [
   {
     id: 'euroko',
     name: 'EUROKO',
-    description: 'EUROKO je evropský lídr ve svém oboru.',
+    description: '',
     logo: '/images/partners/euroko.jpg',
     website: 'https://www.euroko.eu/',
     category: 'sponzor'
@@ -70,7 +70,7 @@ export const partners: Partner[] = [
   {
     id: 'little-saigon',
     name: 'LITTLE SAIGON',
-    description: 'Autentická vietnamská kuchyně v srdci Brna.',
+    description: '',
     logo: '/images/partners/little-saigon.jpg',
     website: 'https://littlesaigon.cz/',
     category: 'sponzor'
@@ -78,15 +78,15 @@ export const partners: Partner[] = [
   {
     id: 'red-bull',
     name: 'RED BULL',
-    description: 'Red Bull - dodává ti křídla.',
-    logo: '/images/partners/red-bull.jpg',
+    description: '',
+    logo: '/images/partners/redbull.jpg',
     website: 'https://www.redbull.com/cz-cs',
     category: 'sponzor'
   },
   {
     id: 'ofigo',
     name: 'Ofigo',
-    description: 'Ofigo - váš partner pro inspirativní literaturu.',
+    description: '',
     logo: '/images/partners/ofigo.jpg',
     website: 'https://www.ofigo.cz/',
     category: 'sponzor'
@@ -94,7 +94,7 @@ export const partners: Partner[] = [
   {
     id: 'motivp',
     name: 'MotivP',
-    description: 'MotivP - motivace a osobní rozvoj.',
+    description: '',
     logo: '/images/partners/motivp.jpg',
     website: 'https://www.motivp.cz/',
     category: 'sponzor'
@@ -102,7 +102,7 @@ export const partners: Partner[] = [
   {
     id: 'ammi',
     name: 'AMMI',
-    description: 'AMMI - váš spolehlivý partner.',
+    description: '',
     logo: '/images/partners/ammi.jpg',
     website: 'https://ammi.cz/',
     category: 'sponzor'
