@@ -154,4 +154,17 @@ export const speakers: Speaker[] = [
     annotation: 'Co se stane, když to příliš dlouho „nevzdáváme" – a kde naopak držení zuby nehty ničí zdraví, vztahy i byznys? Budu sdílet příběh svého podnikání, ve kterém se snažím rozlišit zdravou vytrvalost od sebeničení, pracovat se svou kapacitou a rozhodností včas ukončovat projekty, role nebo způsoby, které už neslouží.',
     isWorkshop: true
   },
+  {
+    id: 'nikola-katolicka',
+    imageUrl: '/images/speakers/nikola-katolicka.jpg',
+    name: 'Nikola Katolická',
+    description: 'Moderátorka sportovních, firemních a společenských akcí',
+    bio: 'Nikola je moderátorka, kterou baví posouvat své limity. Na střední se bála prezentací, dnes ji mluvení před lidmi živí. Co se změnilo? Začala si věřit — hlavně díky cestování a studiu v Rakousku a Thajsku. Dnes moderuje česky, anglicky i německy sportovní, firemní i společenské akce. Vidět jste ji mohli třeba na hokejovém MS žen, florbalovém superfinále v O2 aréně nebo na sociálních sítích hokejové extraligy. Střihla si ale i několik akcí v zahraničí — zatím nejdál ji moderování zavedlo do italských Benátek.',
+    socialLinks: [
+      { type: 'instagram', url: 'https://www.instagram.com/nikca.katolicka/' },
+      { type: 'linkedin', url: 'https://cz.linkedin.com/in/nikolakatolicka' },
+      { type: 'web', url: 'http://nkatolicka.cz' }
+    ],
+    isWorkshop: false
+  }
 ];
